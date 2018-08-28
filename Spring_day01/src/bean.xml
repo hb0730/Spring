@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--id属性  是一个字符串，用于标识 单个bean  定义。 lazy-init  延迟加载-->
+    <!--  class属性  定义 bean  的类型，并 使用完全限定的类名  -->
+<!--    <bean id="bean" class="org.spring.day01.bean.Bean">
+        <property name="name" value="张三"/>
+    </bean>-->
+    <!--通过settring注入到bean的属性中-->
+<!--    <bean id="paren" class="org.spring.day01.bean.Paren">
+        <property name="name" value="张三"/>
+        <property name="son" ref="son"/>
+    </bean>
+    <bean id="son" class="org.spring.day01.bean.Son">
+        <property name="name" value="李四"/>
+    </bean>-->
+    <bean id="parenNoReference" class="org.spring.day01.bean.Paren">
+        <constructor-arg name="name" value="王五"/>
+        <constructor-arg ref="sonNoReference"/>
+    </bean>
+    <bean id="sonNoReference" class="org.spring.day01.bean.Son">
+        <property name="name" value="李四"/>
+    </bean>
+</beans>

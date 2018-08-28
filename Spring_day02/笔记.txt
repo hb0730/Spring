@@ -1,0 +1,12 @@
+(一)IOC注解
+    @Required   注解适用于bean的setter方法 此注解仅表示受影响的bean属性必须在配置时通过bean定义中的显式赋值或通过自动注入。
+    @Autowired  注解应用于构造函数/应用于“传统”setter方法/还可以将注解应用于具有任意名称和/或多个参数的方法/应用于字段
+    @Autowired  的 required 属性被推荐 required 属性指示该属性不是自动注入目的所必需的，如果不能自动注入，则忽略该属性
+    @Primary微调基于注解的自动装配
+    @Qualifier  注解,可指定的参数绑定一个限定的值，缩小类型匹配集，以便为每个参数选择特定的bean
+    @Qualifier  注解也可以在单独的构造函数参数或方法参数上指定:
+    @Resource  是一个很好的解决方案，通过唯一名称引用特定的集合或数组bean
+    @Configuration 级别的注解
+    @Component  注解你的组件类，仅仅只是一种标识组件的方式
+    @Configuration配置中添加 @ComponentScan  ，其中 basePackages  属性是两个类的常用父包
+    @Bean  方法声明为 static
